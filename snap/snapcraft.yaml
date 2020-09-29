@@ -9,12 +9,9 @@ description: |
   The following tools are included:
     - cURL
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
-
-apps:
-  curl:
-    command: bin/curl
+  (More to come, and feel free to come up with suggestions!)
+grade: devel
+confinement: strict 
 
 slots:
   bin:
@@ -23,6 +20,9 @@ slots:
     source:
       read:
         - $SNAP/bin
+        - $SNAP/etc
+        - $SNAP/lib
+        - $SNAP/usr
 
 parts:
   home-assistant-toolbox:
