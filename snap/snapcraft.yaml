@@ -1,15 +1,15 @@
 name: home-assistant-toolbox
 base: core20
-version: '0.1' 
-summary: Extend your Home Assistant (home-assistant-snap)
+version: '0.2' 
+summary: "Extend your Home Assistant (home-assistant-snap)"
 description: |
   Toolbox contains executables that extends functionality
   to you home-assistant-snap installation.
 
   The following tools are included:
     - cURL
-
-  (More to come, and feel free to come up with suggestions!)
+    - make (build-essential)
+  + More to come, and feel free to come up with suggestions!
 
   Requires home-assistant-snap revision 71 or later!
 grade: stable
@@ -33,3 +33,4 @@ parts:
     source-type: local
     stage-packages:
       - curl
+      - build-essential

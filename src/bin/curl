@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SNAP/shared-bin/lib/x86_64-linux-gnu:$SNAP/shared-bin/usr/lib/x86_64-linux-gnu
+
+for LIB in $(find "${SNAP}/shared-bin" -name libcurl.so* -exec dirname {} \;); do
+    if [ ! -z "${LD_LIBRARY_PATH##*$LIB*}" ]; then
+        export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${LIB}"
+    fi
+done
+echo "SHARED-LIBS: ${LD_LIBRARY_PATH}"
+
 eval $SNAP/shared-bin/usr/bin/curl $@
