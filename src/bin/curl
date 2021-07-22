@@ -5,6 +5,5 @@ for LIB in $(find "${SNAP}/shared-bin" -name libcurl.so* -exec dirname {} \;); d
         export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${LIB}"
     fi
 done
-echo "SHARED-LIBS: ${LD_LIBRARY_PATH}"
 
 eval $SNAP/shared-bin/usr/bin/curl $@
