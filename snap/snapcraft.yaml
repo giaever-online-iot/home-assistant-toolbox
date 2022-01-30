@@ -8,7 +8,7 @@ description: |
 
   The following tools are included:
     - cURL
-    - make (build-essential)
+    - build-essential: make, gcc etc
   + More to come, and feel free to come up with suggestions!
 
   Requires home-assistant-snap revision 71 or later!
