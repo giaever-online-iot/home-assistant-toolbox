@@ -1,5 +1,8 @@
 # Home Assistant Toolbox
 
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/home-assistant-toolbox)
+[![Donate with PayPal](https://giaever.online/paypal-donate-button.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69NA8SXXFBDBN&source=https://git.giaever.org/joachimmg/home-assistant-toolbox)
+
 Toolbox contains executables that extends functionality
 to you home-assistant-snap installation.
 
