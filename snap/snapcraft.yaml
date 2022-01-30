@@ -32,11 +32,25 @@ slots:
         - $SNAP/lib
         - $SNAP/usr
 
+layout:
+  /usr/lib:
+    bind: $SNAP/usr/lib
+
 parts:
   home-assistant-toolbox:
     plugin: dump
     source: ./src
     source-type: local
+  dependencies: # Split this form hat, to prevent pulling it for each change
+    plugin: nil
     stage-packages:
-      - curl
+      - binutils
       - build-essential
+      - curl
+      - libc6-dev
+      - linux-libc-dev
+    override-stage: |
+      snapcraftctl stage
+      sed -i 's#/usr/lib#/snap/home-assistant-snap/current/shared-bin/usr/lib#g' ${SNAPCRAFT_STAGE}/usr/lib/x86_64-linux-gnu/libc.so
+    # organize:
+    #   '*': shared-bin
