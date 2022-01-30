@@ -10,16 +10,5 @@ export C_INCLUDE_PATH=":$SNAP/usr/include:$SNAP/shared-bin/usr/include:$SNAP/sha
 export CPATH="${C_INCLUDE_PATH}"
 export CPLUS_INCLUDE_PATH=":$SNAP/shared-bin/usr/include/c++"
 export OBJC_INCLUDE_PATH="$SNAP/shared-bin/usr/lib/x86_64-linux-gnu"
-# for INC in $(find "${SNAP}/shared-bin" \( -name limits.h -o -name  -exec dirname {} \;); do
-#     if [ -z "${INC##*c++*}" ]; then
-#         export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:${INC}"
-#     else
-#         export CPATH="${CPATH}:${INC}"
-#     fi
-# done
-
-echo "LD_LIBRARY_PATH: ${LD_LIBRARY_PATH}"
-echo "C_INCLUDE_PATH: ${C_INCLUDE_PATH}"
-echo "CPLUS_INCLUDE_PATH: ${CPLUS_INCLUDE_PATH}"
 
 eval $SNAP/shared-bin/usr/bin/gcc $@
