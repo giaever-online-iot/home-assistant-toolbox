@@ -1,6 +1,6 @@
 name: home-assistant-toolbox
 base: core20
-version: '0.2' 
+version: '0.3' 
 summary: "Extend your Home Assistant (home-assistant-snap)"
 description: |
   Toolbox contains executables that extends functionality
